@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "roboto";
+        }
+        :root{
+            --marco-gris-forms: rgb(225,225,225);
+            --input-gris: rgb(245,245,245);
+            --marco-gris-container: rgb(200,200,200);
+            --fondo-input: rgb(250,250,250);
+            --baby-blue: rgb(175, 222, 241);
+            --text-gris: rgb(128,128,128)
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+        body{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;            
+            background: var(--input-gris);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container-general{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+        .container-izquierdo{
+            margin-right: 20px;
+        }
+        .telefono-img{
+            width: 400px;
+        }
+        .container-login{
+            width:350px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center; 
+            border: 1px solid var(--marco-gris-container);            
+            background: white;
+            margin-bottom: 12px;
+        }
+        .logo img{
+            width: 200px;
+        }
+        .container-form{
+            display: flex;
+            flex-direction: column;            
+            align-items: center;
+            border-bottom: 1px solid var(--marco-gris-forms) ; 
+            margin: 0 40px;
+            position: relative;                      
+        }
+        .container-form input{            
+            width: 266px;
+            height: 36px;
+            margin: 8px;
+            font-size: 11px;
+            border: 1px solid var(--marco-gris-forms) ;
+            border-radius: 4px;
+            color: gray;
+            background-color: var(--fondo-input);
+            font-weight: 300;
+            
+        }
+        .container-form input:nth-child(1){
+            margin-bottom: 0;
+        }
+        .container-form button{            
+            width: 268px;
+            height: 30px;
+            margin: 8px;
+            border-radius: 4px;
+            border: none;
+            background-color: var(--baby-blue);
+            color: var(--white);
+            margin-bottom: 30px;
+            font-size: 14px;  
+                      
+        }
+        .text{
+            width: 40px;
+            height: 40px;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            top:88%;
+            left: 42%;
+            color: var(--text-gris);
+            font-weight:300 ;
+        }
+        .login-face{
+            margin-top: 40px;
+        }
+        .login-face a{
+            text-decoration: none;
+                       
+        }
+        .login-face .face{            
+            margin-bottom: 12px;
+        }
+        .login-face .face a{
+            font-size: 14px ;
+            color: rgba(17, 61, 142, 0.898); 
+        }
+        .contraseña{
+            font-size: 10px ;
+            font-weight: 350;
+            color: var(--black);        
+            
+        }
+
+        .register{
+            background: white;
+            width: 350px;
+            height: 63px;
+            border: 1px solid var(--marco-gris-container);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            
+        }
+        .register-text{
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register-text p:nth-child(1){
+            font-size: 14px;
+            margin-right: 8px;
+            font-weight: 300;
+        }
+        .register-text p:nth-child(2){
+            color: rgb(75, 179, 231);
+            font-size: 14px;
+        }
+        .descarga-app{
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .descarga{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .descarga p{
+            font-size: 14px;
+            font-weight: 300;
+        }
+        .images-descarga{
+            margin-top: 16px;
+        }
+        .images-descarga img{
+            width: 140px;
+        }
+
+        footer{
+            margin: 0;
+        }
+        .barra-arriba{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+        .barra-arriba a{
+            text-decoration: none;
+            margin: 4px 8px;
+            font-size: 12px;
+            color: gray;
+            font-weight: 300;
+        }
+        .barra-centro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+        .barra-centro a{
+            text-decoration: none;
+            margin: 0px 8px;
+            font-size: 12px;
+            color: gray;
+            font-weight: 300;
+        }
+
+
+    </style>
+
+</head>
+<body>    
+    <section class="container-general">
+        <div class="container-izquierdo">
+            <div class="imagen-cel">
+                <img src="./images/celular-insta2.JPG" alt="telefono" class="telefono-img">
+            </div>
+        </div>
+        <div class="container-derecho">
+            <div class="container-login">
+                <div class="logo">
+                    <img src="./images/Instagram_logo.svg" alt="">
+                </div>
+                <div class="container-form">            
+                    <input type="email" value="" placeholder=" Teléfono, usuario o correo electronico">
+                    <input type="password"   placeholder=" Contraseña">
+                    <button>Iniciar sesión</button>  
+                    <div class="text">
+                        <p>o</p>
+                    </div>          
+                </div>
+                
+                <div class="login-face">
+                    <div class="face">
+                        <a href="" class="fa-brands fa-facebook"></a>
+                        <a href="">Iniciar sesion con facebook</a>
+                    </div>            
+                    <a href="" class="contraseña">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+            </div>
+            <div class="register">
+                <div class="register-text">
+                    <p>¿No tienes una cuenta?</p>
+                    <p>Regístrate</p>
+                </div>
+            </div>
+            <div class="descarga-app">
+                <div class="descarga">
+                    <p>Descarga la app.</p>
+                    <div class="images-descarga">
+                        <img src="https://tv.joycemeyer.org/espanol/wp-content/uploads/sites/3/2022/02/Apple-App-Store-Logo.png" alt="">
+                        <img src="https://es.logodownload.org/wp-content/uploads/2019/06/disponible-en-google-play-badge-1.png" alt="">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </section>
+    <footer>
+        <div class="barra-arriba">
+            <a href="">Meta</a>
+            <a href="">Información</a>
+            <a href="">Blog</a>
+            <a href="">Enpleo</a>
+            <a href="">Ayuda</a>
+            <a href="">API</a>
+            <a href="">Privacidad</a>
+            <a href="">Condiciones</a>
+            <a href="">Cuentas destacadas</a>
+            <a href="">Hashtags</a>
+            <a href="">Ubicaciones</a>
+            <a href="">Instagram Lite</a>
+            <a href="">Subir contactos y no usuarios</a>
+        </div>
+        <div class="barra-centro">
+            <a href="">Danza</a>
+            <a href="">Comida y bebida</a>
+            <a href="">Casa y Jardin</a>
+            <a href="">Musica</a>
+            <a href="">Artes visuales</a>            
+        </div>
+    </footer>
+</body>
+</html>
